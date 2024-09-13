@@ -1,0 +1,62 @@
+@import 'mixins';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  // theme colors
+  --blue: #{toHSL(#121415)};
+  --red: #{toHSL(#ed6756)};
+  --primary-blue: #{toHSL(#121415)};
+  --primary-red: #{toHSL(#ed6756)};
+  --secondary-blue: #{toHSL(#191c1d)};
+  --secondary-gray: #{toHSL(#a6a7ab)};
+  --secondary-gray-dark: #{toHSL(#646c71)};
+  --secondary-gray-pale: #{toHSL(#e8eefb)};
+  --blue: #{toHSL(#1e4259)};
+  --charcoal: #{toHSL(#5a6174)};
+  --white: #{toHSL(#fff)};
+  --black: #{toHSL(#1d1d1d)};
+  --mistake: #{toHSL(#ef4362)};
+  --success: #{toHSL(#3ca25f)};
+  --gray: #{toHSL(#a6a7ab)};
+  --gray-dark: #{toHSL(#787878)};
+  --gray-pale: #{toHSL(#ecedee)};
+  --gray-white: #{toHSL(#D6D8D9)};
+  // compound color
+  --background: var(--white);
+  --foreground: var(--black);
+}
+
+html {
+  @apply bg-background text-foreground;
+}
+
+@layer components {
+  // container with single max-width
+  .container {
+    @apply mx-auto max-w-[74rem] px-[clamp(1.5rem,4vw,3rem)];
+  }
+
+  .container-lg {
+    @apply container max-w-[84rem];
+  }
+
+  .section_wrapper {
+    @apply flex max-w-[31rem] flex-col gap-1.5;
+  }
+  .section_header {
+    @apply text-base font-medium uppercase;
+  }
+  .section_title {
+    @apply text-[2rem] font-bold leading-none sm:text-[2.5rem] md:text-[2.75rem];
+  }
+  .section_description {
+    @apply text-base font-normal;
+  }
+
+  .link {
+    @apply underline underline-offset-2;
+  }
+}

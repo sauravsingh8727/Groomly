@@ -1,0 +1,21 @@
+# repository
+node_modules
+.vercel
+.turbo
+.next
+out
+next-env.d.ts
+
+# debug
+*-debug.log*
+*-error.log*
+
+# package-lock
+package-lock.json
+pnpm-lock.yaml
+bun.lockb
+yarn.lock
+
+# local env files
+.env*.local
+

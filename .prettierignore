@@ -1,0 +1,7 @@
+node_modules
+public
+.vercel
+.turbo
+.next
+.prettierrc
+*.min.js

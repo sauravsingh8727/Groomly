@@ -1,0 +1,26 @@
+.mockup {
+  --mockup-height: 590;
+  --mockup-width: 297;
+  --offset-y: 16;
+  --offset-x: 20;
+  aspect-ratio: var(--mockup-width) / var(--mockup-height);
+}
+
+.mockup_image {
+  aspect-ratio: var(--mockup-width) / var(--mockup-height);
+  @apply absolute z-1 size-full shrink-0 object-contain;
+}
+.mockup_screen {
+  @apply absolute z-1 shrink-0 object-contain absolute-center;
+  // computed dimension
+  --mask-height: 557;
+  --mask-width: 256;
+  aspect-ratio: var(--mask-width) / var(--mask-height);
+  height: calc(100% * var(--mask-height) / var(--mockup-height));
+  width: calc(100% * var(--mask-width) / var(--mockup-width));
+  // mask properties
+  mask-image: url('/ui/iphone.mask.svg');
+  mask-size: 100%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}

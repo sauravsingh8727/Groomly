@@ -1,0 +1,14 @@
+@use 'sass:color';
+@use 'sass:math';
+
+@function round($value, $fractionDigits: 0) {
+  $power: math.pow(10, $fractionDigits);
+  @return math.div(math.round($power * $value), $power);
+}
+
+@function toHSL($color) {
+  $h: round(hue($color), 2);
+  $s: round(saturation($color), 2);
+  $l: round(lightness($color), 2);
+  @return $h + ' ' + $s + ' ' + $l;
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc.json",
+  "arrowParens": "always",
+  "bracketSameLine": true,
+  "endOfLine": "lf",
+  "importOrder": [
+    "^(react).*",
+    "^(next).*",
+    "<THIRD_PARTY_MODULES>",
+    "^@/(.*)$",
+    "^@public/(.*)$",
+    "^[./]",
+    "<TYPES>"
+  ],
+  "importOrderParsers": ["typescript", "jsx", "decorators-legacy"],
+  "importOrderTSVersion": "5.4.5",
+  "singleQuote": true,
+  "overrides": [
+    { "files": ["*.css", "*.scss"], "options": { "printWidth": 240 } },
+    { "files": ["*.json", ".*rc"], "options": { "trailingComma": "none" } }
+  ],
+  "plugins": [
+    "prettier-plugin-pkg",
+    "prettier-plugin-imports",
+    "prettier-plugin-jsdoc",
+    "prettier-plugin-tailwindcss"
+  ],
+  "printWidth": 80,
+  "quoteProps": "consistent",
+  "semi": true,
+  "tabWidth": 2,
+  "tailwindFunctions": ["clsx", "cn", "cva"],
+  "trailingComma": "all"
+}
